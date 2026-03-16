@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+
+:root {
+  --bg-canvas: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-accent: #2563eb;
+  --bg-accent-soft: #dbeafe;
+  --text-primary: #1e293b;
+  --text-muted: #475569;
+  --line-soft: #dbe3ea;
+  --ok: #15803d;
+  --warn: #b45309;
+
+  /* shadcn/ui CSS variables */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background:
+    radial-gradient(circle at 14% 10%, #dbeafe 0%, transparent 36%),
+    radial-gradient(circle at 94% 2%, #e2e8f0 0%, transparent 30%),
+    var(--bg-canvas);
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.015em;
+}
+
+.admin-fade-in {
+  animation: fadeInUp 0.55s ease both;
+}
+
+.admin-stagger > * {
+  opacity: 0;
+  animation: fadeInUp 0.45s ease forwards;
+}
+
+.admin-stagger > *:nth-child(1) { animation-delay: 0.04s; }
+.admin-stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.admin-stagger > *:nth-child(3) { animation-delay: 0.16s; }
+.admin-stagger > *:nth-child(4) { animation-delay: 0.22s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
